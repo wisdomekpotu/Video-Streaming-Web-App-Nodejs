@@ -8,7 +8,6 @@ const exphbs = require('express-handlebars')
 const path = require('path')
 const flash = require('connect-flash');
 const colors = require('colors')
-const morgan = require('morgan')
 const passport = require('passport')
 const { Store } = require('express-session')
 const MongoStore = require('connect-mongo')(session)
@@ -36,10 +35,7 @@ app.use(express.json());
 //connect-flash middleware
 app.use(flash());
 
-//logging http status codes
-if (process.env.NODE_ENV === 'development') {
-  app.use(morgan('dev'))//then use the morgan middleware
-}
+
 
 
 //handlebars middleware

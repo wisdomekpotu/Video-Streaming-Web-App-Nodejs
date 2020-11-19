@@ -98,7 +98,7 @@ router.get('/edit/:id', alreadyin, async (req, res) => {
 // show add page
 router.delete('/:id', alreadyin, async (req, res) => {
   try {
-    await Video.remove({ _id: req.params.id })
+    await Video.deleteOne({ _id: req.params.id })
     res.redirect('/dashboard')
   } catch (err) {
     console.log(err)
