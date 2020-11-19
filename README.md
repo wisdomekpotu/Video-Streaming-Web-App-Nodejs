@@ -16,7 +16,7 @@ THIS IS A VIDEO STREAMING WEB PLATFORM
 
 ### Env Variables
 
-Create a CONFIG.env file in the config file
+Create a config.env file in the config folder
 
 
 ### Install Dependencies
