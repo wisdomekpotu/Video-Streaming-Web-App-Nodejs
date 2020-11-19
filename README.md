@@ -21,14 +21,15 @@ Create a CONFIG.env file in the config file
 
 ### Install Dependencies
 
-```
 npm install
+
+
+
+
+
+### Run
+
 npm run dev
-
-
-
-
-
 
 
 
