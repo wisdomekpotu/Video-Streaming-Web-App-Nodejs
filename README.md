@@ -11,8 +11,7 @@ THIS IS A VIDEO STREAMING WEB PLATFORM
 ![screenshot](https://github.com/wisdomekpotu/Shadownet-APP/blob/main/screenshots/login.png) 
 
 ![screenshot](https://github.com/wisdomekpotu/Shadownet-APP/blob/main/screenshots/dasjhj.png) 
-
-![screenshot](https://github.com/wisdomekpotu/Shadownet-APP/blob/main/screenshots/notDASH.png) 
+ 
 
 
 ### Env Variables
@@ -20,18 +19,11 @@ THIS IS A VIDEO STREAMING WEB PLATFORM
 Create a CONFIG.env file in the config file
 
 
-### Install Dependencie
+### Install Dependencies
 
 ```
 npm install
-
-
-
-### Run
-
-```
 npm run dev
-
 
 
 ## License
