@@ -5,16 +5,17 @@ const methodOverride = require('method-override')
 const connectDB = require('./Database/mongoDB')
 const session = require('express-session')
 const exphbs = require('express-handlebars')
+const compression = require('compression')
 const path = require('path')
 const flash = require('connect-flash');
 const colors = require('colors')
 const passport = require('passport')
 const { Store } = require('express-session')
 const MongoStore = require('connect-mongo')(session)
+
+
+//initializing express
 const app = express()
-
-
-
 
 //load the config file 
 dotenv.config({ path: './config/config.env' })
@@ -25,8 +26,12 @@ require('./passportjs/passport-facebook')(passport)
 require('./passportjs/passport-twitter')(passport)
 require('./passportjs/passport-local')(passport)
 require('./passportjs/passport-github')(passport)
+
 // calling the database function 
 connectDB();
+
+// compression middleware
+app.use(compression());
 
 //body parser middleware
 app.use(express.urlencoded({ extended: false }));
@@ -35,14 +40,9 @@ app.use(express.json());
 //connect-flash middleware
 app.use(flash());
 
-
-
-
 //handlebars middleware
 app.engine('.hbs', exphbs({ helpers: require('./helpers/hbs'), defaultLayout: 'main', extname: '.hbs' }));
 app.set('view engine', '.hbs');
-
-
 
 //public file path
 app.use(express.static(path.join(__dirname, 'public')))
@@ -52,9 +52,6 @@ app.use('/thumbnails', express.static(path.join(__dirname, 'thumbnails')))
 
 //serving videos statically
 app.use('/videos', express.static(path.join(__dirname, 'videos')))
-
-
-
 
 //sessions middleware (must be above passport middleware)
 app.use(session({

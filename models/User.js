@@ -3,7 +3,7 @@ const bcrypt = require('bcryptjs')
 
 
 const UserSchema = new mongoose.Schema({
-  // define the schema for our user model
+
   local: {
     email: String,
     password: String

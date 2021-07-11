@@ -34,7 +34,6 @@ const storage = multer.diskStorage({
 
 
 const upload = multer({ storage: storage });
-
 //process the add form      \      /videos
 router.post('/', alreadyin, upload.fields([{ name: 'video', maxCount: 1 }, { name: 'thumbnail', maxCount: 1 }]), async (req, res, next) => {
   try {
@@ -54,8 +53,6 @@ router.post('/', alreadyin, upload.fields([{ name: 'video', maxCount: 1 }, { nam
     res.render('error/500')
   }
 });
-
-
 
 
 //show single stories
@@ -91,7 +88,6 @@ router.get('/edit/:id', alreadyin, async (req, res) => {
     res.render('error/500')
   }
 });
-
 
 
 
