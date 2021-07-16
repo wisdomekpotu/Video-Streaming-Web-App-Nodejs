@@ -45,10 +45,10 @@ Technologies Used:
   ```
 2. setup your database in config.py:
   ```
-   MONGO_URI = 'postgresql://username:password@localhost:5432/databaseName'  
+   MONGO_URI = ''  
 
   ```
-  ```
+  
 
 3. Run the development server:
 
@@ -58,10 +58,13 @@ Technologies Used:
   ```
 
 5. Run Application:
+
   ```
   $ npm start
+  
   ```
   Open Browser > http://localhost:5000/
+  
   
   
 
