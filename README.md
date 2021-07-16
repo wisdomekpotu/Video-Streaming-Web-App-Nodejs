@@ -6,14 +6,7 @@ This project is an Open Source online portal web-application for lecturers of a 
 
 
 
-> e-learning web application made using Jvascript(Nodejs), MongoDb, Bootstrap.
-
-[![GitHub](https://img.shields.io/github/license/donnatto/ez-learning?color=purple)](https://opensource.org/licenses/MIT)
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/donnatto/ez-learning?color=red)](https://github.com/donnatto/ez-learning/releases)
-[![GitHub issues](https://img.shields.io/github/issues/donnatto/ez-learning)](https://github.com/donnatto/ez-learning/issues)
-![GitHub repo size](https://img.shields.io/github/repo-size/donnatto/ez-learning?color=blue&label=size)
-[![GitHub stars](https://img.shields.io/github/stars/donnatto/ez-learning?style=social)](https://github.com/donnatto/ez-learning/stargazers)
-
+> e-learning web application made using Javascript(Nodejs), MongoDb, Bootstrap.
 
 ---
 
@@ -43,7 +36,7 @@ Technologies Used:
   ```
   $ npm install
   ```
-2. setup your database in config.py:
+2. setup your database:
   ```
    MONGO_URI = ''  
 
